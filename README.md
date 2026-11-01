@@ -15,6 +15,11 @@ npm run build      # typecheck + production build into dist/
 npm run preview    # serve the production build
 ```
 
+## Deploy
+
+`.github/workflows/deploy.yml` builds on every push and pull request, and publishes `dist/` to GitHub Pages when `main` changes
+(live at <https://hhtdiary.github.io/TripLibre-GISDay-2026/> after the first run on `main`).
+
 ## Presenting
 
 | Key | Action |
