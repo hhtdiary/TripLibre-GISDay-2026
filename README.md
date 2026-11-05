@@ -47,7 +47,7 @@ Open the page once online before the talk so the Google Fonts are cached (offlin
 - **Slide 10 (Atlanta)** is built from GitHub issues #4–#6; add your own "what I felt" line in its speaker note.
 - **Slide 04 map** is an illustrative drawing, labelled as such.
 - **Slide 06 demo video**: none yet; the slide shows phone mockups. Set `MEDIA.demoVideo` to show a real recording.
-- **Slide 13 QR code** points to the product site until the App Store listing is live; set `LINKS.appStore` afterward. v2.1.0 was in App Store review at last report — do not say "live" until it is.
+- **Slide 13 QR code** points to the [App Store listing](https://apps.apple.com/us/app/triplibre-your-trip-diary/id6826907636) (v2.1.0, live). Set `LINKS.appStore` to `null` in `src/media.ts` to fall back to the product site.
 
 ## Sources and attribution
 

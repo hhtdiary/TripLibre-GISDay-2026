@@ -332,7 +332,7 @@ const Worked = () => (
         <ul>
           <li>One person, 17 days</li>
           <li>No formal benchmark yet</li>
-          <li>v2.1.0 is in App Store review</li>
+          <li>iPhone only (iOS 17+)</li>
         </ul>
       </div>
     </div>
@@ -385,7 +385,13 @@ const Thanks = () => {
           <img className="qr-logo" src={A('triplibre-logo.png')} alt="" />
           <QR url={url} />
           <b>Try TripLibre</b>
-          <span>{url.replace('https://', '')}</span>
+          {LINKS.appStore ? (
+            <a className="store-badge" href={LINKS.appStore} target="_blank" rel="noreferrer">
+              <img src={A('app-store-badge.png')} width={193} height={65} alt="Download TripLibre on the App Store" />
+            </a>
+          ) : (
+            <span>{url.replace('https://', '')}</span>
+          )}
         </div>
       </div>
     </div>
@@ -416,9 +422,9 @@ export const SLIDES: SlideDef[] = [
   { title: 'The Loop', render: Loop,
     notes: 'The Atlanta story is one turn of a loop I use for every change. 1 Issue: I write the problem down. 2 Discuss and solve: Claude Code implements it and tests it in the iOS simulator. 3 Pull request. 4 Codex reviews automatically. 5 Final check: I decide — nothing merges without me. 6 Merge. Then a field test finds the next problem and the loop restarts. Concrete example, issue #32 one-tap stop stamping, PR #53: Codex flagged (P2) that a stamp 10 s after a stay could create a stop shorter than the 60 s minimum (about 39 s estimated); fixed in commit 8a26c25 with test shortStopKeepsItsMinimumNextToAStay (34 s to 60 s). Git does not record which tool wrote which line, so do not claim it. (~1.5 min)' },
   { title: 'What Actually Worked?', render: Worked,
-    notes: '14 GitHub releases from v0.1.0 (2026-09-28) to v2.1.0 (2026-10-25). 112 tests, including 14 synthetic scenarios (README figure). A calibration moved whole-day agreement from 0.827 to 0.939 on 5 held-out days. All accuracy numbers come from one person over 17 days: no formal benchmark, no other people, phones or cities. v2.1.0 is in App Store review; do not say it is live until it is. (~1 min)' },
+    notes: '14 GitHub releases from v0.1.0 (2026-09-28) to v2.1.0 (2026-10-25). 112 tests, including 14 synthetic scenarios (README figure). A calibration moved whole-day agreement from 0.827 to 0.939 on 5 held-out days. All accuracy numbers come from one person over 17 days: no formal benchmark, no other people, phones or cities. v2.1.0 passed App Store review and is now on the App Store, free for iOS 17 or later; the remaining platform limit is that it is iPhone only. (~1 min)' },
   { title: 'What I Learned', render: Learned,
     notes: 'AI made implementation far more accessible to me. It did not remove the need for research judgment: deciding what to build, reviewing what was built, and validating it. Do not claim speed, cost or accuracy gains that were not measured. (~1 min)' },
   { title: 'Thank You / Try TripLibre', render: Thanks,
-    notes: 'Close with the question, then thanks. The QR code points to the official product site (triplibre.hhtdiary.org) until the App Store link exists; set LINKS.appStore in src/media.ts once live. Three takeaways: why TripLibre was created, how a researcher used AI to build it, and why human judgment and research validity still matter. (~1 min)' },
+    notes: 'Close with the question, then thanks. The QR code goes straight to TripLibre on the App Store (free, iOS 17+); the product site is triplibre.hhtdiary.org. Three takeaways: why TripLibre was created, how a researcher used AI to build it, and why human judgment and research validity still matter. (~1 min)' },
 ]

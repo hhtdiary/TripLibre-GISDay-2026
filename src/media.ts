@@ -8,6 +8,6 @@ export const MEDIA = {
 
 export const LINKS = {
   product: 'https://triplibre.hhtdiary.org',
-  /** Add the App Store URL once v2.1.0 is live; the closing slide then points the QR code there. */
-  appStore: null as string | null,
+  /** Public App Store listing (v2.1.0). The closing slide's QR code points here; null falls back to the product site. */
+  appStore: 'https://apps.apple.com/us/app/triplibre-your-trip-diary/id6826907636' as string | null,
 }
