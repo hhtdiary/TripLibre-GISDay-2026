@@ -194,6 +194,8 @@ button { font: inherit; }
 .qr-logo { position: absolute; top: -50px; left: -50px; width: 120px; height: 120px; border-radius: 30px; border: var(--line) solid var(--ink); box-shadow: 6px 6px 0 var(--ink); transform: rotate(-8deg); }
 .qr b { font: 800 56px var(--display); margin-top: 10px; }
 .qr span { font: 700 26px var(--body); color: var(--ink-2); }
+.qr .store-badge { display: block; line-height: 0; margin-top: 8px; }
+.qr .store-badge img { width: 270px; height: auto; }
 
 /* controls */
 .nav { position: fixed; right: 16px; top: 16px; display: flex; gap: 8px; opacity: 0; transition: opacity .2s; }
