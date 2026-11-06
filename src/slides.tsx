@@ -41,7 +41,7 @@ const Cover = () => (
       <p className="who pop" style={pop(3)}><b>Zhanchao Yang</b> · MCP &amp; MUSA, University of Pennsylvania</p>
     </div>
     <div className="cover-logo pop" style={pop(2)}>
-      <img src={A('triplibre-logo.png')} alt="TripLibre app icon" />
+      <img src={A('triplibre-logo.png?v=3')} alt="TripLibre app icon" />
     </div>
   </div>
 )
@@ -382,7 +382,7 @@ const Thanks = () => {
       </div>
       <div className="col-visual">
         <div className="qr card pop" style={pop(2)}>
-          <img className="qr-logo" src={A('triplibre-logo.png')} alt="" />
+          <img className="qr-logo" src={A('triplibre-logo.png?v=3')} alt="" />
           <QR url={url} />
           <b>Try TripLibre</b>
           {LINKS.appStore ? (
